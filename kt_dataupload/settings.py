@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
+    'rest_framework',
+    'articles',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Media files
+
+# URL que maneja los medios servidos desde MEDIA_ROOT, 
+# utilizados para administrar archivos almacenados 
+MEDIA_URL = '/media/'
+# Ruta absoluta del sistema de archivos al directorio 
+# que contendrá los archivos cargados por el usuario 
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
